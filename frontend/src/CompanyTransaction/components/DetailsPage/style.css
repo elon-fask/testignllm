@@ -1,0 +1,21 @@
+.details-page-container > div:first-child {
+    margin-bottom: 24px;
+}
+
+.loading-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.transaction-summary {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+}
+
+.transaction-summary > div:nth-child(odd) {
+    text-align: right;
+    font-weight: bold;
+}

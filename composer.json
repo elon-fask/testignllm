@@ -1,0 +1,67 @@
+{
+  "name" : "nytech/cso-ccs",
+  "description" : "Crane Admin/Crane Pay Crane School Application",
+  "require" : {
+    "php": "^7.0",
+    "yiisoft/yii2": "~2.0.5",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0",
+    "mikehaertl/php-pdftk" : "^0.4.4",
+    "authorizenet/authorizenet": "^1.9",
+    "npm-asset/lodash": "^4.17",
+    "npm-asset/moment": "^2.18",
+    "2amigos/yii2-tinymce-widget": "~1.1",
+    "2amigos/yii2-date-picker-widget": "~1.0",
+    "vlucas/phpdotenv": "^2.4",
+    "phpoffice/phpspreadsheet": "^1.1",
+    "npm-asset/datalist-polyfill": "^1.11",
+    "npm-asset/bulma": "^0.6.2",
+    "npm-asset/bulma-calendar": "^1.1",
+    "npm-asset/bulma-switch": "^1.0",
+    "npm-asset/font-awesome": "~4.7.0",
+    "npm-asset/animate.css": "^3.6",
+    "aws/aws-sdk-php": "^3.52",
+    "dompdf/dompdf": "^0.8.2",
+    "bower-asset/eonasdan-bootstrap-datetimepicker": "^4.17",
+    "quickbooks/v3-php-sdk": "^5.0"
+  },
+  "require-dev" : {
+    "yiisoft/yii2-debug": "~2.0.0",
+    "yiisoft/yii2-gii": "~2.0.0",
+    "yiisoft/yii2-faker": "~2.0.0",
+    "codeception/codeception": "^2.3",
+    "codeception/verify": "~0.3.1",
+    "codeception/specify": "~0.4.3",
+    "guzzlehttp/guzzle": ">=4.1.4 <7.0",
+    "squizlabs/php_codesniffer": "3.*"
+  },
+  "scripts" : {
+    "post-create-project-cmd" : [ "yii\\composer\\Installer::postCreateProject" ]
+  },
+  "keywords" : [ "Crane Admin", "Crane Pay" ],
+  "minimum-stability" : "stable",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "extra" : {
+    "yii\\composer\\Installer::postCreateProject" : {
+      "setPermission" : [ {
+        "runtime" : "0777",
+        "web/assets" : "0777",
+        "yii" : "0755"
+      } ],
+      "generateCookieValidationKey" : [ "config/web.php" ]
+    }
+  },
+  "config" : {
+    "process-timeout" : 1800,
+    "platform": {
+      "php": "7.0.22"
+    }
+  },
+  "type" : "project",
+  "license" : "Proprietary"
+}

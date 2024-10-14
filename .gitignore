@@ -1,0 +1,49 @@
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+vendor/*
+/vendor
+/vendor/*
+/web/images/roster/*
+/web/upload
+/config/params.php
+/web/images/users/*
+/config/db.php
+web/app-forms/*
+web/application-files/*
+web/session/*
+web/reports/*
+web/cranes/*
+web/images/candidates/*
+web/images/session/*
+web/spreadsheet/*
+web/js/react
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# Docker-related
+deploy/keys/jwtRS256.key*
+docker-httpd.conf
+.env
+tests/_output/*

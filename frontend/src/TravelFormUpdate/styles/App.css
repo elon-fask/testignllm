@@ -1,0 +1,11 @@
+.datepicker .calendar .calendar-nav {
+    background: #209cee;
+}
+
+.datepicker .calendar .calendar-header {
+    background: #3273dc;
+}
+
+.select:not(.is-multiple)::after {
+    z-index: 0;
+}

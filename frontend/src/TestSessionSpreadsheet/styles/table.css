@@ -1,0 +1,282 @@
+body {
+  font-family: 'Open Sans', sans-serif, Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 14px;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.container--spreadsheet {
+  overflow: scroll;
+  margin-bottom: 30px;
+}
+
+.spreadsheet .tableHeader--upper td {
+  padding: 4px 8px 4px 8px;
+  background-color: #DBDCDE;
+  height: 50px;
+}
+
+.spreadsheet .tableCell--clear {
+  visibility: hidden;
+}
+
+.spreadsheet thead td {
+  background-color: #94C954;
+  font-weight: bold;
+  text-align: center;
+}
+
+.spreadsheet td {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+.spreadsheet td:hover {
+  cursor: cell;
+}
+
+.spreadsheet tr:nth-child(2n) {
+  background-color: #DBDCDE;
+}
+
+.table--summary {
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.table--summary tr {
+  background-color: #94C954;
+}
+
+.table--summary tr:nth-child(2n) {
+  background-color: rgb(216, 227, 188);
+}
+
+button a:hover {
+  text-decoration: none;
+}
+
+.content-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  min-width: 120px;
+}
+
+.tableHeader--lower .content-cell {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: initial;
+}
+
+.content-cell.content-cell-name {
+  max-width: 160px;
+  min-width: 160px;
+}
+
+.content-cell.content-cell-company {
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.content-cell.content-cell-application-type {
+  max-width: 100px;
+  min-width: 100px;
+}
+
+.content-cell.content-cell-boolean {
+  max-width: 70px;
+  min-width: 70px;
+}
+
+.content-cell.content-cell-currency {
+  max-width: 90px;
+  min-width: 90px;
+}
+
+.content-cell.content-cell-payment-status {
+  max-width: 120px;
+  min-width: 120px;
+}
+
+.content-cell.content-cell-cellphone {
+  max-width: 120px;
+  min-width: 120px;
+}
+
+.content-cell.content-cell-practice {
+  max-width: 90px;
+  min-width: 90px;
+}
+
+.content-cell.content-cell-notes {
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.content-cell.content-cell-invoice-number {
+  max-width: 120px;
+  min-width: 120px;
+}
+
+.content-cell.content-cell-po-number {
+  max-width: 240px;
+  min-width: 240px;
+}
+
+.spreadsheet--practical-test-schedule th {
+  border: 1px solid red;
+  padding: 8px;
+}
+
+.spreadsheet--practical-test-schedule th > div {
+  min-width: 100px;
+  max-width: 100px;
+  text-align: center;
+}
+
+.spreadsheet--practical-test-schedule th.day-1 {
+  background-color: #558ED5;
+}
+
+.spreadsheet--practical-test-schedule th.day-2 {
+  background-color: #C3D69B;
+}
+
+.spreadsheet--practical-test-schedule th.day-3 {
+  background-color: #B3A2C7;
+}
+
+.spreadsheet--practical-test-schedule td {
+  border-right: 1px solid red;
+  border-left: 1px solid red;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 4px;
+}
+
+.spreadsheet--practical-test-schedule tfoot td.day-1 {
+  background-color: #558ED5;
+}
+
+.spreadsheet--practical-test-schedule tfoot td.day-2 {
+  background-color: #C3D69B;
+}
+
+.spreadsheet--practical-test-schedule tfoot td.day-3 {
+  background-color: #B3A2C7;
+}
+
+@media screen {
+  .container--spreadsheet .spreadsheet td:first-of-type {
+    border-left: none;
+  }
+}
+
+@media print {
+  body {
+    font-family: 'Open Sans', sans-serif, Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 10px;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  .container--spreadsheet {
+    overflow: visible;
+    margin-bottom: 30px;
+  }
+
+  .spreadsheet.is-fixed td {
+    border-right: none;
+  }
+
+  .spreadsheet.is-fixed tr:last-child td {
+    border: 1px solid black;
+  }
+
+  .tableHeader--upper td:first-child {
+    background: none;
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+    border-right: none;
+  }
+
+  .content-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
+    min-width: 90px;
+  }
+
+  .content-cell.content-cell-name {
+    max-width: 120px;
+    min-width: 120px;
+  }
+
+  .content-cell.content-cell-company {
+    max-width: 120px;
+    min-width: 120px;
+  }
+
+  .content-cell.content-cell-application-type {
+    max-width: 50px;
+    min-width: 50px;
+  }
+
+  .content-cell.content-cell-boolean {
+    max-width: 40px;
+    min-width: 40px;
+  }
+
+  .content-cell.content-cell-currency {
+    max-width: 70px;
+    min-width: 70px;
+  }
+
+  .content-cell.content-cell-payment-status {
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .content-cell.content-cell-cellphone {
+    max-width: 70px;
+    min-width: 70px;
+  }
+
+  .content-cell.content-cell-practice {
+    max-width: 50px;
+    min-width: 50px;
+  }
+
+  .content-cell.content-cell-notes {
+    max-width: 100px;
+    min-width: 100px;
+  }
+
+  .content-cell.content-cell-invoice-number {
+    max-width: 120px;
+    min-width: 120px;
+  }
+
+  .content-cell.content-cell-po-number {
+    white-space: nowrap;
+    overflow: visible;
+    max-width: 200px;
+    min-width: 200px;
+  }
+
+  .page-break {
+    height: calc(100vh - 96px);
+  }
+
+  .page-break:nth-child(n+1) {
+    margin-top: 30px;
+  }
+}

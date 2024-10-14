@@ -1,0 +1,1327 @@
+body{
+    background: #fcfcfc;
+    font-family: 'Open Sans', sans-serif, Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+
+/* Main Nav colors
+-------------------------------------------------- */
+.navbar{
+    font-size: 18px;
+}
+.navbar-inverse {
+    border: none;
+    background-color: #0471af;
+    box-shadow: 0 0 10px #001d61;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color:#fcfcfc;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
+{
+    background-color: #004990;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+
+}
+/* where is that ??? */
+.navbar-inverse .navbar-nav>.signin>a, .navbar-inverse .navbar-nav>.active.signin>a{
+    color:#FFA414; /* some weird orange ?? */
+}
+.dropdown-menu h4{
+    padding-left: 10px;
+    font-size: 14px;
+    color:#004990;
+    margin-bottom: 5px;
+}
+/* Link in dropdonw menu */
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #fcfcfc;
+    background: #0471af;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/* a little less width in nav links */
+.nav>li>a{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* tooltip in Add  Note */
+/*.navbar-inverse .note .tooltip-inner{ min-width: 100px;}*/
+.inbox-badge {
+    font-weight: bold;
+}
+.info-badge-wrapper{
+    display: none;
+    background: red;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    font-size: 9px;
+    text-align: center;
+    top:8px;
+    right: 2px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    border: 1px solid #fff;
+    line-height: 18px;
+
+}
+.mail-notice{
+    position: relative;
+}
+
+/* enlarge tooltip in main nav items*/
+.note .tooltip-inner, .phone-info .tooltip-inner{
+    width: 100px;
+}
+/* mail top nav, enlarge only if has new mail */
+.mail-notice.has-unread .tooltip-inner{
+    width: 120px;
+}
+
+/* custom btn & links
+-------------------------------------------------- */
+.register-back{
+    /*margin-top: 25px;*/
+    margin-bottom: 50px;
+}
+.register-back i{
+    margin-right: 5px;
+}
+.register-back a{
+    /*color: #CC24E0;*/
+    color:#005094
+}
+.register-back a:hover{
+    /*color: #a600ba;*/
+    color: #001d61;
+}
+.btn-cta {
+    color: #f7f7f7;
+    background-color: #005094;
+    border-color: #001d61; /*800094;*/
+
+}
+.btn-cta:hover,  .btn-cta.focus, .btn-cta:focus {
+    color: #fff;
+    background-color: #001d61;
+    border-color: #00002e;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+/*http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css*/
+/* Sticky only for large screeen */
+
+@media (min-width: 992px) {
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 325px;
+    }
+    body.registration-content{
+        margin-bottom: 0;
+        overflow-y: scroll;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 275px;
+    }
+
+
+}
+@media (max-width: 991px) {
+    .container-footer-wraper{
+        position: relative;
+     }
+    .footer {
+        /* Set the fixed height of the footer here */
+        height: auto;
+    }
+    .container-footer-inner{
+        padding-bottom: 50px;
+    }
+    .container-footer-inner h4{
+        margin:0 0 5px 0 ;
+    }
+}
+
+/* footer
+-------------------------------------------------- */
+.footer{
+    background: #a1a1a1;
+    color:#fcfcfc;
+    /*border-top: 1px solid #a0a0a0;∕*/
+    /*font-family: new_ciclegordita;*/
+    border-top: 1px solid #788088; /* lighten main 30% */
+}
+.footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container-footer-inner{
+    padding-top: 25px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.container-footer-inner a{
+    color:#545a5f;
+    font-size: 10px;
+}
+.container-footer-inner a:hover{
+    color:#fcfcfc;
+    /*font-size: 10px;*/
+    text-decoration: none;
+}
+.footer-about{
+    margin-top: 25px;
+}
+.footer-signin a{
+    color:#FFA414;
+}
+.footer h4 a {
+    /*color: #CC24E0*/
+    font-size: 14px;
+}
+
+.copy{
+    background: #545A5F;
+    bottom: 0;
+    color:#e1e3e5;
+    height: 40px;
+    left: 0;
+    line-height: 39px;
+    position: absolute;
+    right: 0;
+    font-size: 10px;
+    width: 100%;
+}
+
+.copy span{ /* &copy; not into custom font */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.copy a{
+    color:#333;
+}
+.copy ul{
+    margin-bottom: 0;
+}
+
+.copy li:after{
+    content:'|';
+    margin-left: 5px;
+}
+.copy li:nth-child(n+1){
+    padding-left: 0px;
+}
+.copy li:last-child:after{
+    margin: 0;
+    content: '';
+    display: none;
+}
+
+
+/* Fixed Nav bar
+-------------------------------------------------- */
+body > .container {
+    padding: 60px 15px 0;
+    min-height: 500px; /* for making sure the date picker always displays at bottom*/
+}
+body.registration-content > .container {
+    padding-top: 100px;
+}
+
+/* back to top Fixed button
+-------------------------------------------------- */
+.back-to-top{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    bottom: 80px;
+    display: none;
+    height: 40px;
+    position: fixed;
+    right: 40px;
+    text-align: center;
+    width: 40px;
+    box-shadow:0 4px 8px rgba(84,90,95,1);
+    z-index: 5;
+}
+.back-to-top a{
+    color:#aaa;
+    display: block;
+    height: 40px;
+    width: 40px;
+}
+.back-to-top a:hover{
+    color:#545A5F;
+    text-decoration: none;
+}
+
+
+/* NAV */
+.navbar-inverse .navbar-brand{
+    color: #fff;
+    margin-right: 25px;
+}
+.navbar-brand{
+    width: 110px;
+}
+.dropdown-tools-sm{
+    width: 55px;
+    min-width: 55px;
+}
+
+.nav-phone{
+    width: 380px;
+    margin: 0 auto;
+}
+.nav-phone a{
+    color: #fff;
+    text-shadow: 0px 0px 1px #CC24E0;
+    font-size: 36px;
+    line-height: 50px;
+}
+.navbar-inverse .nav-phone>a:focus,
+.navbar-inverse .nav-phone>a:hover,
+.navbar-inverse .navbar-nav>.nav-phone.open>a,
+.navbar-inverse .navbar-nav>.nav-phone.open>a:focus,
+.navbar-inverse .navbar-nav>.nav-phone.open>a:hover { background: transparent; color: #FC8F86; text-decoration: none}
+
+
+/* reset bootstrap to have pohne always centered in nav in student */
+.registration-content .navbar-header{
+    float: left;
+}
+.message-notification{
+	display: none;
+}
+
+
+.grid-view th{
+    color:#337ab7;
+}
+/* in table list cell with links popover */
+.action-cell{
+    width: 100px;
+}
+@media screen and (max-width: 768px) {
+    .breadcrumb{margin-left:15px;}
+}
+
+
+
+
+/*
+// Breadcrumb
+// -----------------------------------------------*/
+.breadcrumb{
+    margin: 0;
+    padding:4px 2px;
+    background: transparent;
+}
+.breadcrumb a{
+    color: #66A254;
+}
+.breadcrumb a:hover {
+    color: #46703a;
+}
+/* replace / with > in breadcrumb separator */
+.breadcrumb>li+li:before{
+content: ">\00a0"
+}
+
+@media screen and (max-width: 768px) {
+    .show-action > .fa{display: none}
+}
+
+/*
+// Custom Messages
+// -----------------------------------------------*/
+/* Message Wrapper. For messages styles, default bootstrap helpers classes used. see CustomMessages.js */
+.custom-message{
+    left: 50%;
+    padding: 1px;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.custom-message p{
+    margin: 0;
+    padding: 20px 50px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+
+/*
+// UI Blocker
+// -----------------------------------------------*/
+/* Overlay on ajax pending to block UI  */
+#blocker{
+    bottom: 0;
+    display:none;
+    height: 100%;
+    left: 0;
+    overflow-y:hidden;
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 100%;
+    z-index: 1000000;
+}
+#blocker > div:nth-child(1){
+    background: #000;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 100%;
+    z-index: 1000001
+
+}
+#blocker > div:nth-child(2){
+    background: #fff;
+    border-radius: 4px;
+    margin: 25% auto;
+    opacity: 1;
+    padding: 25px;
+    position: relative;
+    text-align: center;
+    width: 250px;
+    z-index:1000002;
+}
+#blocker > div:nth-child(2) > div > div {
+    float: left;
+    width: 50px;
+    margin-left: 30px;
+}
+#blocker > div:nth-child(2) > div > div+div{
+    float: left;
+    font-size: 22px;
+    line-height: 30px;
+    margin: auto;
+    width: auto;
+}
+
+
+
+
+/* PAGES
+--------------------------------------------------
+-------------------------------------------------- */
+.table{
+    background: #fff;
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+    background: #f5f5f5;
+}
+
+
+
+
+/* Action buttons in header
+-------------------------------------------------- */
+.row-header{
+     margin-bottom: 25px;
+ }
+.row-header div:nth-child(1){
+
+}
+.row-header div:nth-child(2){
+    margin-top: 20px; line-height: 39px; text-align: right
+}
+
+
+
+/* inbox
+-------------------------------------------------- */
+tr.unread {font-weight: bold;}
+
+/* Commons
+-------------------------------------------------- */
+.pop-content ul{width: 85px;} /* default width for action links popover*/
+
+
+/* sorters for tables lists
+-------------------------------------------------- */
+.sorter-content{
+    display: none;
+}
+.sorter-wrapper a, .sorter-wrapper span{
+    display: block;
+    float: left;
+    padding: 0 4px;
+}
+/* active sort: use span not link */
+.sorter-wrapper span{
+    width:20px;
+    height: 20px;
+    color:#333;
+}
+.sorter-wrapper span+a, .sorter-wrapper a+span, .sorter-wrapper a+a{
+    margin-left: 4px;;
+}
+.adTable th .sorter-wrapper a{
+    color:#004990;
+}
+.adTable th .sorter-wrapper a:hover{
+    color:#ccc
+}
+
+
+/* test session index.
+-------------------------------------------------- */
+.test-session-index .input-group.date{
+    width: 150px;
+}
+.candidates-index .input-group.date{
+    width: 150px;
+}
+
+
+
+
+
+
+/* Dashboard
+-------------------------------------------------- */
+/* Widget Wrapper*/
+.widget{
+    min-height: 180px;
+    width: 225px;
+    margin: 40px  auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.175);
+}
+
+/* top title */
+.widget h3{
+    text-align: center;
+    background: #545A5F;
+    color:#fff;
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+
+/* Widget Content:  a widget can have multiple items
+    item = widget-item-content + widget-item-modal-content-wrapper
+*/
+.widget-item{
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+/* widget-item-content */
+/* wic (widget-item-content) =>  Have a clickable link inside the widget content */
+.wic-link{
+    display: block;
+}
+.wic-link span{
+    color:#66A254;
+    display: block;
+    text-align: center;
+}
+.wic-link:hover,
+.wic-link:hover span,
+.wic-link:focus,
+.wic-link:focus span{
+    text-decoration: none;
+    cursor: pointer;
+    color:#46703a; /* darken primary 15% s*/
+}
+
+/* content size */
+.widget-item-number{
+    font-size: 3.5em;
+}
+.widget-item-label{
+    font-size: 1.25em;
+}
+
+/* Bottom links for a widget */
+.widget-item-links{
+    border-top: 2px solid  #545A5F;
+    margin-bottom: 0;
+    background: #f7f7f7;
+    padding: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.widget-item-links li{
+    list-style-type: none;
+    margin: 0;
+    border-bottom: 1px solid  #545A5F;
+    text-align: right;
+}
+.widget-item-links li a{
+    display: block;
+    padding: 5px;
+    color: #545A5F;
+}
+.widget-item-links li a:hover{
+    color: #666;
+    background: #ddd;
+    text-decoration: none;
+}
+.widget-item-links li:last-child{
+    border-bottom-width: 0;
+}
+
+/* DOM placeholder for hidden info in each widget */
+.widget-item-modal-content-wrapper{
+    display: none;
+}
+
+
+
+
+
+/* REGISTRATION
+-------------------------------------------------- */
+/* all steps
+-------------*/
+/* reset bootstrap padding for non col blocks as first-child of a row */
+.bs-block{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.has-error {
+    color:#a94442;
+}
+/* steps wrapper */
+.row-steps{
+    margin-top: 40px;
+}
+.steps{
+    width: 360px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 10px;
+}
+.steps-line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 29px;
+    height: 3px;
+    background: #ccc;
+}
+.steps-line::after {
+    display: block; right: -20px; top:-9px;
+    position: absolute;
+    width: 20px; height: 20px;
+    content: "\f061";
+    font-family: fontawesome;
+    line-height: 20px;
+    color:#ccc
+}
+.step{
+    z-index: 2;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 30px;
+    /*font-family: new_ciclegordita, Arial, sans Serif;*/
+    background: #fff;
+    color:#ccc;
+    position: relative;
+    box-shadow: inset 0px -10px 20px #ccc;
+}
+
+.step-current{
+    background: #079658;
+    color:#fff;
+    box-shadow: inset 0px -10px 20px #006325;
+}
+.step-previous{
+    background: #1F9CE0;
+    color:#0069ad;
+    box-shadow: inset 0px -10px 20px #0069ad;
+}
+
+
+/* main title */
+.step-title{
+    color:#333;
+    text-align: center;
+    /*font-family: new_ciclegordita, Arial, sans Serif;*/
+    margin-top: 40px;
+}
+
+/* forms
+------------ */
+/* form sections */
+.section-title{
+    /*border: 1px solid #1F9CE0;*/
+    /*background: #1F9CE0;*/
+    border: 1px solid #005094;
+    background: #005094;
+    color: #fff;
+    float: left;
+    padding: 15px;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-shadow: 1px 1px 0 #444;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.section-content{
+    padding:15px ;
+    /*border: 1px solid #1F9CE0;*/
+    border: 1px solid #005094;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    /*box-shadow: 0 1px 1px #1F9CE0;*/
+    box-shadow: 0 1px 1px #005094;
+    margin-bottom: 40px;
+}
+/* labels & fields
+--------------------*/
+.control-label{
+    font-weight: normal;
+}
+.label-sm{
+    width: 125px;
+    background: #fff;
+    text-align: center;
+}
+.dob {
+    background: #fff !important;
+}
+.label-sm + div > input{
+    width: 125px;
+}
+.state{
+    width: 125px;
+}
+/* bottom action row */
+.row-buttons{
+    margin-bottom: 50px;
+}
+
+/* specificities for steps
+-----------------------------*/
+/* step 3 */
+.field-candidates-requestada label{font-weight: normal;}
+
+
+/* step 4 */
+.cco-cert-number-wrapper {
+    background: #fc8;
+    padding: 20px;
+    border: 2px solid #b3803c;
+    border-radius: 4px;
+    color: #804d09;
+    padding-top: 30px;
+}
+
+.row-double-input {margin-bottom: 15px;}
+.row-double-input label {
+    float:left;
+    width:165px;
+    margin-right:30px;
+}
+.ssn, .dob, .phone, .zip, .state {
+    width:125px;
+}
+
+/* get our form to respond */
+@media (max-width: 768px){
+    .row-double-input > div {
+        clear: both;
+        width: 100%;
+    }
+    .row-double-input label{
+        width: 100%;
+        clear: both;
+    }
+}
+@media (min-width: 768px) and  (max-width: 992px){
+    .row-double-input label  {
+        width:150px;
+    }
+    .row-double-input >div + div > label  {
+        width:168px;
+    }
+}
+@media (min-width: 993px) and  (max-width: 1199px){
+    .row-double-input label{
+        width:132px;
+    }
+    /* this only can apply to current markup*/
+    .row-double-input >div + div > label  {
+        width:158px;
+    }
+}
+
+
+/* step 5 */
+.payment-notes{
+    list-style-type: none; margin: 0; margin-bottom: 40px; padding-left: 0
+}
+.payment-notes li {
+    position: relative
+}
+.payment-notes li:nth-child(n+2)::before{
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 14px;
+    content:"\f02b";
+    font-family: fontawesome;
+    left: 10px;
+    top: 0;
+}
+#promoCode{
+    float: left; width: 200px;
+}
+
+#promoCode + .btn{
+    margin-left: 15px;
+    float: left; width: 80px;
+}
+
+
+
+
+
+/*----------------------------
+    The file upload form
+-----------------------------*/
+#upload{
+    font-family:'PT Sans Narrow', sans-serif;
+    background-color:#373a3d;
+
+    background-image:-webkit-linear-gradient(top, #373a3d, #313437);
+    background-image:-moz-linear-gradient(top, #373a3d, #313437);
+    background-image:linear-gradient(top, #373a3d, #313437);
+
+    width:400px;
+    padding:30px;
+    border-radius:3px;
+
+    margin:10px auto 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#drop{
+    background-color: #2E3134;
+    padding: 40px 50px;
+    margin-bottom: 30px;
+    border: 20px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    border-image: url('../img/border-image.png') 25 repeat;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size:16px;
+    font-weight:bold;
+    color:#7f858a;
+}
+
+#drop a{
+    background-color:#007a96;
+    padding:12px 26px;
+    color:#fff;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    display:inline-block;
+    margin-top:12px;
+    line-height:1;
+}
+
+#drop a:hover{
+    background-color:#0986a3;
+}
+
+#drop input{
+    display:none;
+}
+
+#upload ul{
+    list-style:none;
+    margin:0 -30px;
+    border-top:1px solid #2b2e31;
+    border-bottom:1px solid #3d4043;
+}
+
+#upload ul li{
+
+    background-color:#333639;
+
+    background-image:-webkit-linear-gradient(top, #333639, #303335);
+    background-image:-moz-linear-gradient(top, #333639, #303335);
+    background-image:linear-gradient(top, #333639, #303335);
+
+    border-top:1px solid #3d4043;
+    border-bottom:1px solid #2b2e31;
+    padding:15px;
+    height: 80px;
+
+    position: relative;
+}
+
+#upload ul li input{
+    display: none;
+}
+
+#upload ul li p{
+    width: 144px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+#upload ul li i{
+    font-weight: normal;
+    font-style:normal;
+    color:#7f7f7f;
+    display:block;
+}
+
+#upload ul li canvas{
+    top: 15px;
+    left: 32px;
+    position: absolute;
+}
+
+#upload ul li span{
+    width: 15px;
+    height: 12px;
+    background: url('../img/icons.png') no-repeat;
+    position: absolute;
+    top: 34px;
+    right: 33px;
+    cursor:pointer;
+}
+
+#upload ul li.working span{
+    height: 16px;
+    background-position: 0 -12px;
+}
+
+#upload ul li.error p{
+    color:red;
+}
+.custom-form-attachment{
+	float: right; position: relative; top: -5px;
+}
+.btn-delete-signed.custom-form-attachment{
+	top: -8px;
+}
+.report-totals{
+	color: red; font-weight: bold;
+}
+.report-header{
+	color: #808080; background-color: #FFFFFF;
+}
+ul.signed{
+	color: green;
+}
+ul.unsigned{
+	color: red;
+}
+/*.navbar .container{*/
+	/*width: 1240px;*/
+/*}*/
+.form-control.readonly{
+	background-color: white;
+}
+.reminder-panel-body table tbody tr, .inbox-panel-body table tbody tr, .incomplete-panel-body table tbody tr,
+.phone-panel-body{
+	cursor:pointer;
+}
+table.table.table-striped tr.past-deadline td {
+    background-color: #f2dede;
+    color: #a94442;
+    border-color: #ebccd1;
+}
+.reminder-panel-body table.table.table-striped tr:hover td {
+    background-color: #ccc;
+}
+
+
+
+table.table.table-striped tr.today-deadline td {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+table.table.table-striped tr.near-deadline td {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+
+
+/* APPLICATIONS
+-------------------------------------------------- */
+/* checkbix alignement in title */
+.application-create .panel-title,
+.application-update .panel-title {
+    position: relative;
+}
+.application-create .panel-title input[type=checkbox],
+.application-update .panel-title input[type=checkbox]{
+    position: relative;
+    top:1px;
+}
+.btn-highlight{
+	background-color: #f9f96e
+}
+
+
+/* REPORTS
+-------------------------------------------------- */
+
+.report-wrapper{
+    overflow: auto;
+}
+
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+    body{
+        font-size: 10px;
+    }
+    .report-wrapper{
+        overflow: visible;
+    }
+
+
+}
+
+/* login page rate icons */
+.rate-ico-list{ list-style-type: none; margin:0 auto; padding: 0; width: 195px;}
+.rate-ico{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid #333;
+    background: red;
+    float: left;
+    margin-right: 20px;
+    line-height: 46px;
+    font-size: 1.5em;
+}
+.rate-ico:last-child{ margin-right: 0px;}
+.rate-ico.rate-3{ background: green; color:#fff;}
+.rate-ico.rate-2{ background: orange; color:#333;}
+.rate-ico.rate-1{ background: red; color:#fff;}
+
+.btn-login{ box-shadow: 3px 3px 2px #666}
+
+
+.rate-text-list{ list-style-type: none; margin:0 auto 2em auto; padding: 0; width: 195px; margin-bottom:1.5em;}
+.rate-text-list li{
+    width: 50px;
+    height: auto;
+    text-align: center;
+    float: left;
+    margin-right: 20px;
+}
+.rate-text-list li:last-child{ margin-right: 0px;}
+
+.title-wrapper{ background: #f0f0f0; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 15px}
+/*.title-action{ margin-top: 25px;}*/
+
+/*.btn-fa .fa{ margin-right: 0.75em}*/
+
+/*.table-list-classes{   border-bottom: 1px solid  #ccc}*/
+/*.table-list-classes tr td:nth-child(1){ line-height: 34px; border-left: 1px solid #ccc}*/
+/*.table-list-classes tr td:nth-child(2){ border-right: 1px solid #ccc}*/
+
+/*@media (min-width: 768px) {*/
+    /*.title-action{ text-align: right}*/
+/*}*/
+
+/*.form-horizontal label{*/
+    /*line-height: 34px;*/
+    /*text-align: right;*/
+/*}*/
+
+.intro{
+    margin-bottom: 25px
+}
+
+.content-wrapper{padding:15px;}
+
+/* yellow like phone button */
+.btn-phone{
+    background-color: #f6f03f;
+    border-color: #e5df49;
+    color:#515035;
+}
+.btn-phone.active, .btn-phone.focus, .btn-phone:active, .btn-phone:focus, .btn-phone:hover, .open>.dropdown-toggle.btn-phone{
+    background-color: #e5df49;
+    border-color: #d2cc27;text-decoration: none
+}
+.btn-phone:hover {text-decoration: none;color:#515035;}
+
+.btn-select-class{
+    color:#333;
+    background-color: #d2cc27;
+    border-color: #b7ac2d;
+}
+.btn-select-class.active, .btn-select-class.focus, .btn-select-class:active, .btn-select-class:focus, .btn-select-class:hover, .open>.dropdown-toggle.btn-select-class{
+    color:#333;
+    background-color: #c2bd37;
+    border-color: #d2cc27;
+}
+.btn-refresh{ display:none;}
+
+
+
+/* modals*/
+h4.roster-name{color:#d44; font-weight: bold; font-size: 1.25em; margin-bottom: .5em;word-wrap: break-word; margin-top: 0;}
+h3.roster-name{color:#d44; font-weight: bold; font-size: 1.25em; margin-bottom: .5em;word-wrap: break-word; margin-top: 0; font-size: 1.5em}
+
+.rate-ico a{display: block; color: inherit; text-decoration: none; position: relative;}
+.rate-ico a i{ position: absolute; top:2px; left: 3px; opacity: 0.8; color:#333; display:none;}
+
+.rate-ico:hover{box-shadow: 0px 0px 7px #333}
+
+.fa-disabled{color:#ccc; cursor: not-allowed}
+
+.rate-confirm{ width: 195px; margin: 0 auto 30px auto;}
+
+.rate-confirm-disabled{ cursor: not-allowed;}
+
+.close{ position: absolute; float: none; top:5px; right: 15px;}
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}
+
+.d-f {
+    display: flex;
+}
+.a-a-c {
+    align-items: center;
+}
+.j-c-c {
+    justify-content: center;
+}
+.f-d-c {
+    flex-direction: column;
+}
+.w-100 {
+    width: 100%;
+}
+.loginconfirmation{
+    border: 2px solid #707070;
+    background-color: white;
+    width: 80% ;
+    max-width: 700px;
+    margin: 50px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 0 6px 3px rgba(0,0,0,0.16);
+}
+.text-center {
+    text-align: center;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.font-b {
+    font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+.c-blue {
+    color: #0471af;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.c-red {
+    color: #E62B1A;
+}
+.callbackdate, .callbackdate1 {
+    height: 50px;
+    width: 200px;
+    border: 1px
+    solid #000;
+    background-color: white;
+    appearance: none;
+    outline: none;
+    text-align-last: center;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+.bs {
+    box-shadow: 0 6px 3px rgb(0 0 0 / 16%);
+}
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
+.select-time,.sendcall-cont,.call-sucess-text{
+    display: none;
+}
+.w-70 {
+    width: 70%;
+}
+.focus,.focuss{
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 0;
+    background-color: white;
+    border-top: 1px solid #D8D8D8;
+    color: #535B6C;
+    z-index: 10;
+    position: relative;
+    margin: -7px 0 0 0;
+}
+.focus1,.focuss1{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+.btn-yelow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5cb85c;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 12px 20px;
+    width: max-content;
+    border-radius: 5px;
+    min-width: 150px;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    box-sizing: border-box;
+    height: 40px;
+    cursor: pointer;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+
+/******  loading *********/
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 25px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #2c2462;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+  .po-form-button .lds-ellipsis {
+    display: none;
+  }
+
+  .po-form-button.loading .lds-ellipsis {
+    display: inline-block;
+  }
+
+  .po-form-button.loading button {
+    display: none;
+  }
